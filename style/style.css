@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Montserray-Regular';
+    src: url('../fonts/Montserrat/static/Montserrat-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; /* Оптимизация загрузки */
+}
+
+body {
+  font-family: 'Montserray-Regular', Arial, sans-serif;
+  background-color: rgba(251, 249, 248, 1);
+}
+
+header a{
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+}
+.header:hover {
+  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+}/*# sourceMappingURL=style.css.map */
