@@ -15,6 +15,19 @@
             <a href="#results">Результаты</a>
             <button>Записаться</button>
         </nav>
+        <!-- Мобильное меню -->
+        <button class="mobile-menu-toggle" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="mobile-menu">
+            <a href="#about">Обо мне</a>
+            <a href="#programs">Программы питания</a>
+            <a href="#why">Почему я?</a>
+            <a href="#results">Результаты</a>
+            <button>Записаться</button>
+        </div>
     </header>
 
     <section class="start">
@@ -28,7 +41,7 @@
         <img src="img/Airbrush-Image-Enhancer-1757521508544 1.png" alt="Елена Егорова"> 
     </section>
 
-    <section class="what-you-get" id="results">
+    <section class="what-you-get">
         <h1>Ваш <span class="shrift schrift-result">итог</span> нашей работы:</h1>
         <div class="row">
           <div class="item">
@@ -128,7 +141,7 @@
         </div>
     </section>
 
-    <section class="three_steps" id="why">
+    <section class="three_steps">
       <div class="three_steps-header">
         <h2>Ваш старт к результату - <br>БЕСПЛАТНО</h2>
         <p>Первая консультация</p>
@@ -162,7 +175,7 @@
       <button class="three_steps-cta">Записаться на консультацию</button>
     </section>
 
-    <section class="why_i" id="why_i">
+    <section class="why_i" id="why">
       <h2>Почему выбирают меня?</h2>
       <p style="margin-top: -20px;">Я предлагаю не просто диету, а систему на всю жизнь</p>
       <div class="why_i-grid">
@@ -195,7 +208,7 @@
       <p>Я научу вас дружить с едой, чтобы вы могли поддерживать свой идеальный вес самостоятельно, без диет и мучений.</p>
     </section>
 
-    <section class="results">
+    <section class="results" id="results">
       <h2>Наши результаты</h2>
       <p class="results_under_name">Преображение в декрете: -22 кг и возвращение к жизни</p>
       <div>
@@ -240,50 +253,54 @@
       </div>
     </section>
 
-    <!-- <section class="consultation">
-      <p>Запишитесь на <span class="pink_consultation">бесплатную</span> консультацию</p>
-      <p>
-        Эта встреча позволит нам познакомиться и <br>
-        наметить цели нашей работы.
-      </p>
-      <div style="display: flex;">
-        <div style="display: flex;">
-          <input type="text" id="name" class="name_input">
-          <input type="phone" id="phone" class="phone_input">
-        </div>
-        <div style="display: flex;">
-          <p>
-            Пройди опрос, чтобы я лучше <br>
-            смогла понять тебя
-          </p>
-        </div>
-        <button>Пройти опрос</button>
-      </div>
-      <button>ОТПРАВИТЬ ЗАЯВКУ</button>
-    </section> -->
-
     <section class="consultation">
       <p class="name_consultation">Запишитесь на <span class="pink_consultation">бесплатную</span> консультацию</p>
-      <p>
+      <p class="consultation-description">
         Эта встреча позволит нам познакомиться и <br>
         наметить цели нашей работы.
       </p>
     
-      <!-- Форма: инпуты слева, текст+кнопка справа -->
-      <div class="form-container">
-        <div class="inputs">
-          <input type="text" id="name" class="name_input" placeholder="Ваше Имя">
-          <input type="tel" id="phone" class="phone_input" placeholder="Номер телефона">
-        </div>
-    
-        <div class="survey">
-          <p>Пройди опрос, чтобы я лучше смогла понять тебя</p>
-          <button class="survey-btn">Пройти опрос</button>
-        </div>
-      </div>
-    
-      <!-- Кнопка отправки внизу -->
-      <button class="submit-btn">ОТПРАВИТЬ ЗАЯВКУ</button>
+      <!-- Форма с FormSubmit -->
+      <form action="https://formsubmit.co/sergobossboss@yandex.ru" method="POST" class="form-container">
+        <div class="form-top">
+          <div class="inputs">
+            <input type="text" name="Имя" placeholder="Ваше Имя" required class="name_input" aria-label="Ваше Имя" pattern="[а-яА-ЯёЁa-zA-Z\s]+" minlength="2" maxlength="50" title="Имя должно содержать только буквы">
+            <!-- Добавь валидацию номера телефона: только цифры, начинается с +7, минимум 11 символов -->
+            <input type="tel" name="Телефон" placeholder="Номер телефона" required class="phone_input" aria-label="Номер телефона" pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" title="Введите номер телефона в формате +7 (XXX) XXX-XX-XX">
+          </div>
+      
+          <div class="survey">
+            <p>Пройди опрос, чтобы я лучше смогла понять тебя</p>
+            <button type="button" class="survey-btn">Пройти опрос</button>
+          </div>
+        </div>       
+        <button type="submit" class="submit-btn">ОТПРАВИТЬ ЗАЯВКУ</button>
+      </form>
     </section>
+  <script src="js/validation.js"></script>
+
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="img/Airbrush-Image-Enhancer-1757521508544 1.png" alt="Елена Егорова">
+        </div>
+        <div class="footer-right">
+            <h2>Елена Егорова</h2>
+            <h3>Нутрициолог, консультант по питанию</h3>
+            <div class="footer-links">
+                <div class="footer-links-left">
+                    <a href="#about">Обо мне</a>
+                    <a href="#programs">Программы питания</a>
+                </div>
+                <div class="footer-links-right">
+                    <a href="#why">Почему я?</a>
+                    <a href="#results">Результаты</a>
+                </div>
+                <button class="footer-btn">Записаться</button>
+            </div>
+            <p class="footer-copyright">© 2025 КодРоста — продвижение бизнеса в России. Все права защищены</p>
+        </div>
+    </div>
+  </footer>
 </body>
 </html>
