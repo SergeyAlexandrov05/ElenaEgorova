@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileMenuToggle && mobileMenu) {
         mobileMenuToggle.addEventListener('click', function() {
             mobileMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
         });
         
         // Закрытие меню при клике на ссылку
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', function() {
                 mobileMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
             });
         });
         
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (mobileMenuButton) {
             mobileMenuButton.addEventListener('click', function() {
                 mobileMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
             });
         }
     }

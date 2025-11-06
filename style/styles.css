@@ -80,6 +80,7 @@ body img {
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
+  overflow-x: hidden;
 }
 
 /* ========================================
@@ -125,6 +126,12 @@ header button {
 .mobile-menu-toggle,
 .mobile-menu {
   display: none;
+}
+
+/* Добавляем flex для корректного отображения кнопки гамбургера */
+.mobile-menu-toggle {
+  justify-content: center;
+  align-items: center;
 }
 
 header button:active,
@@ -969,12 +976,28 @@ header button:hover {
    Мобильная адаптация
    ======================================== */
 @media (max-width: 768px) {
+  /* Вертикальный текст в Hero-секции */
+  .start-consultation-badge {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+  .start-consultation-badge p {
+    font-size: 18px;
+    margin: 0;
+    color: var(--color-pink-light);
+  }
+
   /* Мобильное меню */
   header nav {
     display: none;
   }
-  
-  .mobile-menu-toggle {
+    .mobile-menu-toggle {
     display: block;
     position: absolute;
     top: 20px;
@@ -983,72 +1006,101 @@ header button:hover {
     background: none;
     border: none;
     cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  
   .mobile-menu-toggle span {
     display: block;
     width: 25px;
     height: 3px;
     background-color: var(--color-primary-green);
-    margin: 5px 0;
+    margin: 3px 0;
     transition: 0.3s;
+    transform-origin: center;
   }
-  
+  /* Анимация превращения в крестик */
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
   .mobile-menu {
     display: none;
     position: fixed;
     top: 0;
     right: 0;
-    width: 80%;
-    max-width: 300px;
-    height: 100%;
-    background-color: white;
+    left: auto; /* Добавлено для надежности */
+    width: 70%; /* Оставляем относительную ширину */
+    max-width: 80vw; /* Исправление: теперь меню не выйдет за пределы экрана */
+    height: 100vh; /* Исправление: используем viewport height */
+    background-color: var(--color-primary-green);
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     z-index: 99;
-    padding: 20px;
+    padding: 50px 15px;
     overflow-y: auto;
-    border-radius: 0 0 0 20px;
+    border-radius: 10px;
+    margin-right: 50px;
   }
-  
   .mobile-menu.active {
     display: block;
+    height: 30%;
+    margin-top: 4.5%;
   }
-  
   .mobile-menu a {
     display: block;
-    color: var(--color-primary-green);
+    color: var(--color-background);
     text-decoration: none;
-    padding: 15px 0;
-    font-size: 18px;
+    padding: 12px 0;
+    font-size: 16px;
     border-bottom: 1px solid rgba(50, 121, 91, 0.1);
+    text-align: center;
   }
-  
   .mobile-menu button {
     display: block;
-    width: 100%;
-    margin-top: 20px;
-    padding: 15px;
-    background-color: var(--color-primary-green);
+    width: 80%;
+    margin: 20px auto 0;
+    padding: 12px;
     color: var(--color-background);
+    background-color: var(--color-pink-light);
     border: none;
     border-radius: var(--border-radius-medium);
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
+    text-align: center;
+  }
+  .mobile-menu a:first-child {
+    margin-left: 0;
   }
   
+  .mobile-menu button:hover {
+    background-color: var(--color-pink);
+    transform: translateY(-2px);
+  }
+  
+  .mobile-menu button:active {
+    transform: translateY(0);
+  }
+
   /* Hero-секция */
   .start {
     flex-direction: column;
     margin-left: 0;
     text-align: center;
     padding: 20px;
+    position: relative; /* Добавлено для позиционирования вертикального текста */
   }
-  
   .start h1 {
     font-size: 36px;
     margin-top: 20px;
   }
-  
   .start img {
     position: relative;
     margin: 20px 0;
@@ -1057,102 +1109,82 @@ header button:hover {
     height: auto;
     margin-right: 0;
   }
-  
   .start button {
     width: 100%;
     padding: 15px 20px;
     font-size: 18px;
   }
-  
   /* Блок "Ваш итог" */
   .what-you-get {
     border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
   }
-  
   .row {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-  
   .item {
     flex-direction: column;
     text-align: center;
     max-width: 100%;
   }
-  
   /* Секция "Обо мне" */
   .about-top {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-  
   .about-top img {
     max-width: 100%;
     margin-top: 0;
   }
-  
   .about-text h2 {
     font-size: 28px;
   }
-  
   .about-text p {
     font-size: 18px;
   }
-  
   .about-text ol {
     font-size: 18px;
   }
-  
   .about-cta h3 {
     font-size: 20px;
     width: 100%;
   }
-  
   /* Программы питания */
   .programs {
     margin-left: 0;
     padding: 0 20px;
   }
-  
   .programs-title {
     font-size: 28px;
   }
-  
   .programs-row {
     flex-direction: column;
   }
-  
   .block_programs {
     width: 100%;
     margin-left: 0;
     margin-top: 20px;
     padding: 20px;
   }
-  
   .block_programs button {
     width: 100%;
   }
-  
   /* Три шага */
   .three_steps {
     padding: 40px 20px;
   }
-  
   .three_steps-header {
     padding-left: 0;
     text-align: center;
   }
-  
   .three_steps-header h2 {
     font-size: 28px;
   }
-  
   .three_steps-header p {
     font-size: 22px;
   }
-  
   .three_steps-container {
     position: static;
     min-height: auto;
@@ -1160,11 +1192,9 @@ header button:hover {
     flex-direction: column;
     gap: 30px;
   }
-  
   .three_steps-line {
     display: none;
   }
-  
   .step {
     position: static;
     width: 100%;
@@ -1172,190 +1202,157 @@ header button:hover {
     padding: 20px;
     border-left: 3px dashed var(--color-pink-light);
   }
-  
   .step-content .number {
     position: static;
     font-size: 60px;
     margin-bottom: 15px;
   }
-  
   .step-one .number,
   .step-two .number,
   .step-three .number {
     margin: 0;
     text-align: center;
   }
-  
   .three_steps-cta {
     position: static;
     margin: 20px auto 0;
     padding: 15px 30px;
     font-size: 18px;
   }
-  
   /* Почему выбирают меня */
   .why_i h2 {
     font-size: 28px;
   }
-  
   .why_i > p {
     font-size: 20px;
   }
-  
   .why_i-grid {
     flex-direction: column;
     gap: 20px;
   }
-  
   .why_i-item {
     flex: 1 1 100%;
     max-width: 100%;
   }
-  
   /* Миссия */
   .my_mission {
     border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
   }
-  
   .my_mission p {
     padding-left: 20px;
     padding-right: 20px;
   }
-  
   .my_mission p:nth-child(2) {
     font-size: 28px;
   }
-  
   .my_mission p:nth-child(3) {
     font-size: 20px;
   }
-  
-  /* Результаты */
+  /* Результаты - ИСПРАВЛЕНО */
   .results {
     padding: 0 20px;
   }
-  
   .results h2 {
     font-size: 28px;
   }
-  
   .results_under_name {
     font-size: 24px;
   }
-  
-  .results div {
+  /* Специфичный селектор для контейнера "до/после" */
+  .results > div:first-of-type {
     flex-direction: column;
   }
-  
-  .results img {
+  .results > div:first-of-type img {
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px;
   }
-  
   .text_results p {
     font-size: 18px;
     margin-left: 0;
   }
-  
   .text_results ol {
     font-size: 18px;
   }
-  
   .results_img {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* По макету 4 в ряду */
     gap: 10px;
     margin-left: 0;
+    margin-top: 20px;
   }
-  
   .results_img img {
     width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
   }
-  
   /* Форма консультации */
   .consultation {
     border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
   }
-  
   .name_consultation {
     font-size: 24px;
   }
-  
   .consultation-description {
     font-size: 18px;
   }
-  
   .pink_consultation {
     font-size: 24px;
   }
-  
   .form-top {
     flex-direction: column;
     gap: 20px;
   }
-  
   .inputs {
     margin-left: 0;
     max-width: 100%;
   }
-  
   .survey {
     max-width: 100%;
   }
-  
   .submit-btn {
     font-size: 18px;
   }
-  
   /* Подвал */
   .footer {
     margin-top: 50px;
   }
-  
   .footer-container {
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
-  
   .footer-left {
     position: static;
     margin: 0;
     margin-bottom: 20px;
   }
-  
   .footer-left img {
-    width: 120px;
-    height: auto;
+    /* width: 120px; УДАЛЕНО */
+    height: 150px; /* Увеличено для лучшего заполнения */
+    width: auto;
     transform: none;
   }
-  
   .footer-right {
     margin-left: 0;
     padding-left: 0;
     text-align: center;
   }
-  
   .footer-right h2 {
     font-size: 24px;
   }
-  
   .footer-right h3 {
     font-size: 18px;
   }
-  
   .footer-links {
     flex-direction: column;
     gap: 15px;
     margin-bottom: 20px;
   }
-  
   .footer-links-left,
   .footer-links-right {
     gap: 10px;
   }
-  
   .footer-copyright {
     text-align: center;
   }
@@ -1364,6 +1361,12 @@ header button:hover {
 /* Адаптация для очень маленьких экранов */
 @media (max-width: 480px) {
   .results_img {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 фото в ряд на маленьких экранах */
+  }
+  .start-consultation-badge {
+    left: 10px;
+  }
+  .start-consultation-badge p {
+    font-size: 16px;
   }
 }
