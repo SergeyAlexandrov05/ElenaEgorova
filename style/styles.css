@@ -9,7 +9,6 @@
   --color-pink-transparent: rgba(214, 129, 152, 0.2);
   --color-white: rgba(255, 255, 255, 1);
   --color-text-dark: rgba(50, 121, 91, 1);
-  
   /* Дополнительные переменные для оптимизации */
   --border-radius-small: 10px;
   --border-radius-medium: 15px;
@@ -23,12 +22,10 @@
   --font-size-large: 32px;
   --font-size-xlarge: 36px;
 }
-
 /* Плавная прокрутка для якорных ссылок */
 html {
   scroll-behavior: smooth;
 }
-
 /* ========================================
    Fonts
    ======================================== */
@@ -39,7 +36,6 @@ html {
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Montserray';
     src: url('../fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
@@ -47,7 +43,6 @@ html {
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Bellota';
     src: url('../fonts/Bellota/Bellota-Regular.ttf') format('truetype');
@@ -55,7 +50,6 @@ html {
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
   font-family: 'Unbounded';
   src: url('../fonts/Unbounded/Unbounded-Regular.ttf') format('truetype');
@@ -63,7 +57,6 @@ html {
   font-style: normal;
   font-display: swap;
 }
-
 /* ========================================
    Base Styles
    ======================================== */
@@ -73,7 +66,6 @@ body {
   background-color: var(--color-background);
   margin: 0;
 }
-
 body img {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -82,7 +74,6 @@ body img {
   pointer-events: none;
   overflow-x: hidden;
 }
-
 /* ========================================
    Header
    ======================================== */
@@ -91,23 +82,21 @@ header {
   position: relative;
   z-index: 10;
 }
-
 header nav {
   display: flex;
   align-items: center;
 }
-
 header a {
   text-decoration: none;
   color: var(--color-primary-green);
   padding: 30px;
   font-size: 16px;
 }
-
-header a:first-child {
-  margin-left: 290px;
+@media (min-width: 769px) {
+  header a:first-child {
+    margin-left: 290px;
+  }
 }
-
 header button {
   justify-content: flex-end;
   z-index: 1;
@@ -121,25 +110,21 @@ header button {
   cursor: pointer;
   transition: background-color var(--transition-fast), color var(--transition-fast);
 }
-
 /* Скрыть мобильное меню на десктопной версии */
 .mobile-menu-toggle,
 .mobile-menu {
   display: none;
 }
-
 /* Добавляем flex для корректного отображения кнопки гамбургера */
 .mobile-menu-toggle {
   justify-content: center;
   align-items: center;
 }
-
 header button:active,
 header button:hover {
   background-color: var(--color-primary-green);
   color: var(--color-background);
 }
-
 /* ========================================
    Start Section
    ======================================== */
@@ -150,7 +135,6 @@ header button:hover {
   margin-left: -200px;
   margin-top: -20px;
 }
-
 .start h1 {
   font-family: 'Montserray', Arial, sans-serif;
   font-weight: 700;
@@ -158,42 +142,34 @@ header button:hover {
   font-size: 48px;
   margin-top: 54px;
 }
-
 .start p {
   color: var(--color-primary-green);
   font-size: var(--font-size-large);
 }
-
 .start-motto {
   text-align: center;
   color: var(--color-primary-green);
   font-size: 32px;
 }
-
 .start-motto-span {
   margin-left: 50px;
 }
-
 .shrift {
   font-family: 'Bellota', cursive, sans-serif;
   font-weight: 400;
   color: var(--color-pink-light);
   font-size: 40px;
 }
-
 .schrift-result {
   font-size: 50px;
 }
-
 .schrift-highlight {
   font-size: 22px;
 }
-
 .pink {
   color: var(--color-pink-light);
   font-size: 22px;
 }
-
 .start button {
   color: var(--color-white);
   border: 3px solid var(--color-pink);
@@ -204,13 +180,11 @@ header button:hover {
   cursor: pointer;
   transition: background-color var(--transition-fast), color var(--transition-fast);
 }
-
 .start button:active,
 .start button:hover {
   background-color: var(--color-white);
   color: var(--color-pink);
 }
-
 .start img {
   position: relative;
   margin-top: -30px;
@@ -218,7 +192,6 @@ header button:hover {
   z-index: 0;
   margin-right: -200px;
 }
-
 /* ========================================
    what-you-get Section
    ======================================== */
@@ -232,32 +205,27 @@ header button:hover {
   padding: 20px;
   z-index: 1;
 }
-
 .what-you-get h1 {
   color: var(--color-background);
   text-align: center;
 }
-
 .row {
   display: flex;
   justify-content: center; /* центрирует элементы в строке */
   gap: 60px;               /* равные отступы между элементами */
   margin-bottom: 25px;
 }
-
 .item {
   display: flex;
   align-items: flex-start;
   gap: 12px;
   max-width: max-content; /* чтобы не растягивался */
 }
-
 .item img {
   height: 48px;
   flex-shrink: 0;
   margin-top: 2px;
 }
-
 .item p {
   margin: 0;
   color: var(--color-background);
@@ -265,7 +233,6 @@ header button:hover {
   line-height: 107%;
   text-align: left;
 }
-
 /* ========================================
    About Section
    ======================================== */
@@ -275,7 +242,6 @@ header button:hover {
 .about h3 {
   color: var(--color-primary-green);
 }
-
 .about {
   display: flex;
   flex-direction: column;
@@ -283,7 +249,6 @@ header button:hover {
   gap: 30px; /* отступ между верхней частью и CTA */
   padding: 40px 20px;
 }
-
 .about-top {
   display: flex;
   gap: 30px; /* отступ между фото и текстом */
@@ -291,49 +256,40 @@ header button:hover {
   width: 100%;
   max-width: 1200px; /* ограничение ширины для красоты */
 }
-
 .about-top img {
   object-fit: cover;
   margin-top: 13px;
 }
-
 .about-text {
   flex: 1; /* текст занимает оставшееся пространство */
   max-width: 700px; /* чтобы не растягивался на весь экран */
 }
-
 .about-text h2 {
   margin-top: 8px;
   margin-bottom: 16px;
   font-size: 40px;
 }
-
 .about-text p {
   margin: 0 0 12px 0;
   line-height: 1.6;
   font-size: 22px;
 }
-
 .about-label {
   color: var(--color-pink) !important;
 }
-
 .about-highlight {
   font-size: 22px;
   margin: 12px 0;
 }
-
 .about-text ol {
   padding-left: 20px;
   margin: 12px 0;
   font-size: 22px;
 }
-
 .about-cta {
   text-align: center;
   max-width: 700px;
 }
-
 .about-cta h3 {
   font-size: 26px;
   line-height: 1.4;
@@ -344,39 +300,32 @@ header button:hover {
 .help-section ol {
   margin: 0;
 }
-
 /* ========================================
    Programs Section
    ======================================== */
 .programs {
   margin-left: 330px;
 }
-
 .programs-title {
   color: var(--color-primary-green);
   font-size: 36px;
 }
-
 .programs-row {
   display: flex;
 }
-
 .block_programs {
   color: var(--color-background);
   background-color: var(--color-primary-green);
   padding: 10px 0 43px 63px;
   margin-top: 30px;
 }
-
 .block_programs-first {
   width: 650px;
 }
-
 .block_programs-second {
   margin-left: 50px;
   width: 100%;
 }
-
 .block_programs button {
   color: var(--color-background);
   border: 1px solid var(--color-background);
@@ -387,21 +336,17 @@ header button:hover {
   cursor: pointer;
   transition: background-color var(--transition-fast), color var(--transition-fast);
 }
-
 .block_programs button:active,
 .block_programs button:hover {
   background-color: var(--color-background);
   color: var(--color-primary-green);
 }
-
 .block_programs p {
   font-size: 22px;
 }
-
 .block_programs h4 {
   font-size: 28px;
 }
-
 /* ========================================
    Three Steps Section
    ======================================== */
@@ -411,35 +356,29 @@ header button:hover {
   max-width: 1400px;
   margin: 0 auto;
 }
-
 .three_steps-header {
   text-align: left;
   margin-bottom: 60px;
   padding-left: 100px;
 }
-
 .three_steps-header h2 {
   color: var(--color-primary-green);
   font-size: 36px;
   margin: 0 0 10px 0;
 }
-
 .three_steps-header p {
   color: var(--color-primary-green);
   font-size: 28px;
   margin: 0;
 }
-
 .three_steps-container {
   position: relative;
   min-height: 800px;
   pointer-events: none;
 }
-
 .three_steps-container .step {
   pointer-events: auto;
 }
-
 .three_steps-line {
   position: absolute;
   left: 50%;
@@ -447,7 +386,6 @@ header button:hover {
   transform: translateX(-50%);
   z-index: 1;
 }
-
 .three_steps-line .line-image {
   width: auto;
   height: auto;
@@ -456,36 +394,29 @@ header button:hover {
   display: block;
   object-fit: none;
 }
-
-
 .step {
   position: absolute;
   width: 35%;
   z-index: 3;
 }
-
 .step-one {
   top: 5%;
   right: 5%;
   margin-top: -150px;
   text-align: right;
 }
-
 .step-two {
   top: 10%;
   left: 5%;
 }
-
 .step-three {
   top: 25%;
   right: 5%;
   text-align: right;
 }
-
 .step-content {
   position: relative;
 }
-
 .step-content .number {
   position: absolute;
   font-family: 'Unbounded', Arial, sans-serif;
@@ -496,28 +427,24 @@ header button:hover {
   z-index: 0;
   pointer-events: none;
 }
-
 .step-one .number {
   top: -50px;
   right: 20px;
   text-align: left;
   margin-right: 230px;
 }
-
 .step-two .number {
   top: -55px;
   left: 20px;
   text-align: left;
   margin-left: 160px;
 }
-
 .step-three .number {
   top: -50px;
   right: 20px;
   text-align: left;
   margin-right: 230px;
 }
-
 .step-content h4 {
   position: relative;
   z-index: 1;
@@ -526,7 +453,6 @@ header button:hover {
   margin: 0 0 15px 0;
   font-weight: 700;
 }
-
 .step-content p:not(.number) {
   position: relative;
   z-index: 1;
@@ -535,7 +461,6 @@ header button:hover {
   line-height: 1.6;
   margin: 0;
 }
-
 .three_steps-cta {
   display: block;
   position: relative;
@@ -550,13 +475,11 @@ header button:hover {
   cursor: pointer;
   transition: background-color var(--transition-fast), color var(--transition-fast);
 }
-
 .three_steps-cta:active,
 .three_steps-cta:hover {
   background-color: var(--color-white);
   color: var(--color-pink);
 }
-
 .why_i{
   display: flex;
   flex-direction: column;
@@ -605,7 +528,6 @@ header button:hover {
   margin: 0;
   line-height: 1.4;
 }
-
 .my_mission{
   position: relative;
   background-color: var(--color-primary-green);
@@ -632,7 +554,6 @@ header button:hover {
   color: var(--color-background);
   font-size: 26px;
 }
-
 .results{
   display: flex;
   flex-direction: column;
@@ -661,7 +582,6 @@ header button:hover {
   display: flex;
   flex-direction: column;
 }
-
 .text_results p{
   margin: 0 0 15px 0;
   font-size: 22px;
@@ -682,7 +602,6 @@ header button:hover {
   margin-top: 28px;
   margin-bottom: 28px;
 }
-
 .text_results p:last-child{
   margin-bottom: 0;
 }
@@ -695,7 +614,6 @@ header button:hover {
   color: var(--color-pink-light);
   font-size: 26px;
 }
-
 .consultation {
   position: relative;
   background-color: var(--color-primary-green);
@@ -706,27 +624,23 @@ header button:hover {
   padding: 30px 20px;
   z-index: 1;
 }
-
 .name_consultation {
   color: var(--color-background);
   font-size: 32px;
   margin-bottom: 8px;
   padding-bottom: 0;
 }
-
 .consultation-description {
   color: var(--color-background);
   font-size: 24px;
   margin-top: 8px;
   margin-bottom: 30px;
 }
-
 .pink_consultation {
   font-family: 'Bellota', cursive, sans-serif;
   color: var(--color-pink-light);
   font-size: 36px;
 }
-
 /* Контейнер для формы */
 .form-container {
   display: flex;
@@ -735,7 +649,6 @@ header button:hover {
   gap: 30px;
   width: 100%;
 }
-
 /* Верхняя часть формы: инпуты слева, текст+кнопка справа */
 .form-top {
   display: flex;
@@ -745,7 +658,6 @@ header button:hover {
   width: 100%;
   max-width: 900px;
 }
-
 /* Инпуты — один под другим */
 .inputs {
   display: flex;
@@ -755,7 +667,6 @@ header button:hover {
   max-width: 380px;
   margin-left: 140px;
 }
-
 .name_input,
 .phone_input {
   width: 100%;
@@ -767,18 +678,15 @@ header button:hover {
   color: rgba(50, 121, 91, 0.6);
   box-sizing: border-box;
 }
-
 .name_input::placeholder,
 .phone_input::placeholder {
   color: rgba(50, 121, 91, 0.6);
 }
-
 .name_input:focus,
 .phone_input:focus {
   outline: 2px solid var(--color-pink-light);
   color: rgba(50, 121, 91, 1);
 }
-
 /* Блок справа: текст + кнопка */
 .survey {
   display: flex;
@@ -789,7 +697,6 @@ header button:hover {
   width: 100%;
   max-width: 380px;
 }
-
 .survey p {
   color: var(--color-background);
   font-size: 20px;
@@ -797,7 +704,6 @@ header button:hover {
   margin: 0;
   text-align: center;
 }
-
 .survey-btn {
   padding: 12px 50px;
   border: 2px solid var(--color-pink-light);
@@ -809,16 +715,13 @@ header button:hover {
   transition: all var(--transition-normal) ease;
   white-space: nowrap;
 }
-
 .survey-btn:hover {
   background-color: var(--color-pink-light);
   transform: translateY(-2px);
 }
-
 .survey-btn:active {
   transform: translateY(0);
 }
-
 /* Большая кнопка внизу */
 .submit-btn {
   width: 100%;
@@ -835,18 +738,15 @@ header button:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .submit-btn:hover {
   background-color: var(--color-pink);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(214, 129, 152, 0.3);
 }
-
 .submit-btn:active {
   transform: translateY(0);
   box-shadow: none;
 }
-
 /* Стили для ошибок валидации */
 .phone-error {
   color: #ff5252;
@@ -855,12 +755,10 @@ header button:hover {
   text-align: left;
   padding-left: 10px;
 }
-
 .name_input.error,
 .phone_input.error {
   border-color: #ff5252;
 }
-
 .footer{
   background-color: var(--color-primary-green);
   margin-top: 154px;
@@ -871,7 +769,6 @@ header button:hover {
   padding-top: 35px;
   padding-bottom: 40px;
 }
-
 .footer-container {
   display: flex;
   max-width: 1200px;
@@ -881,7 +778,6 @@ header button:hover {
   position: relative;
   z-index: 1;
 }
-
 .footer-left {
   flex: 0 0 auto;
   display: flex;
@@ -892,7 +788,6 @@ header button:hover {
   z-index: 2;
   margin-left: -150px;
 }
-
 .footer-left img {
   width: auto;
   height: auto;
@@ -900,50 +795,42 @@ header button:hover {
   transform: translateY(7.2%);
   max-height: 150%;
 }
-
 .footer-right {
   flex: 0 0 75%;
   padding-left: 40px;
   margin-left: 550px;
 }
-
 .footer-right h2 {
   color: var(--color-background);
   font-size: 32px;
   margin: 0 0 10px 0;
 }
-
 .footer-right h3 {
   color: var(--color-background);
   font-size: 22px;
   margin: 0 0 30px 0;
   opacity: 0.9;
 }
-
 .footer-links {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
   gap: 50px;
 }
-
 .footer-links-left, .footer-links-right {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-
 .footer-links a {
   color: var(--color-background);
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s ease;
 }
-
 .footer-links a:hover {
   color: var(--color-pink-light);
 }
-
 .footer-btn {
   background-color: var(--color-pink-light);
   color: var(--color-white);
@@ -954,16 +841,13 @@ header button:hover {
   cursor: pointer;
   transition: background-color var(--transition-normal) ease, transform var(--transition-fast) ease;
 }
-
 .footer-btn:hover {
   background-color: var(--color-pink);
   transform: translateY(-2px);
 }
-
 .footer-btn:active {
   transform: translateY(0);
 }
-
 .footer-copyright {
   color: var(--color-background);
   font-size: 14px;
@@ -971,7 +855,6 @@ header button:hover {
   margin: 0;
   text-align: left;
 }
-
 /* ========================================
    Мобильная адаптация
    ======================================== */
@@ -992,37 +875,33 @@ header button:hover {
     margin: 0;
     color: var(--color-pink-light);
   }
-
-  /* Мобильное меню */
+  /* Мобильное меню — ИСПРАВЛЕНО */
   header nav {
     display: none;
   }
-    .mobile-menu-toggle {
+  .mobile-menu-toggle {
     display: block;
     position: absolute;
     top: 20px;
     right: 20px;
     z-index: 100;
-    background: none;
+    background: none !important;
     border: none;
     cursor: pointer;
     width: 35px;
     height: 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
+    margin: 0;
   }
   .mobile-menu-toggle span {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--color-primary-green);
+    background-color: var(--color-pink-light);
     margin: 3px 0;
     transition: 0.3s;
     transform-origin: center;
   }
-  /* Анимация превращения в крестик */
   .mobile-menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
@@ -1037,56 +916,38 @@ header button:hover {
     position: fixed;
     top: 0;
     right: 0;
-    left: auto; /* Добавлено для надежности */
-    width: 70%; /* Оставляем относительную ширину */
-    max-width: 80vw; /* Исправление: теперь меню не выйдет за пределы экрана */
-    height: 100vh; /* Исправление: используем viewport height */
+    width: 80%;
+    max-width: 320px;
     background-color: var(--color-primary-green);
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     z-index: 99;
-    padding: 50px 15px;
+    padding: 80px 20px 20px;
+    box-sizing: border-box;
     overflow-y: auto;
-    border-radius: 10px;
-    margin-right: 50px;
   }
   .mobile-menu.active {
     display: block;
-    height: 30%;
-    margin-top: 4.5%;
   }
   .mobile-menu a {
     display: block;
     color: var(--color-background);
     text-decoration: none;
     padding: 12px 0;
-    font-size: 16px;
-    border-bottom: 1px solid rgba(50, 121, 91, 0.1);
+    font-size: 18px;
     text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   .mobile-menu button {
     display: block;
-    width: 80%;
+    width: 100%;
     margin: 20px auto 0;
     padding: 12px;
-    color: var(--color-background);
-    background-color: var(--color-pink-light);
+    background-color: var(--color-white);
+    color: var(--color-primary-green);
     border: none;
     border-radius: var(--border-radius-medium);
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    text-align: center;
-  }
-  .mobile-menu a:first-child {
-    margin-left: 0;
-  }
-  
-  .mobile-menu button:hover {
-    background-color: var(--color-pink);
-    transform: translateY(-2px);
-  }
-  
-  .mobile-menu button:active {
-    transform: translateY(0);
+    font-weight: bold;
   }
 
   /* Hero-секция */
@@ -1095,7 +956,7 @@ header button:hover {
     margin-left: 0;
     text-align: center;
     padding: 20px;
-    position: relative; /* Добавлено для позиционирования вертикального текста */
+    position: relative;
   }
   .start h1 {
     font-size: 36px;
@@ -1114,6 +975,7 @@ header button:hover {
     padding: 15px 20px;
     font-size: 18px;
   }
+
   /* Блок "Ваш итог" */
   .what-you-get {
     border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
@@ -1128,6 +990,7 @@ header button:hover {
     text-align: center;
     max-width: 100%;
   }
+
   /* Секция "Обо мне" */
   .about-top {
     flex-direction: column;
@@ -1151,6 +1014,7 @@ header button:hover {
     font-size: 20px;
     width: 100%;
   }
+
   /* Программы питания */
   .programs {
     margin-left: 0;
@@ -1171,6 +1035,7 @@ header button:hover {
   .block_programs button {
     width: 100%;
   }
+
   /* Три шага */
   .three_steps {
     padding: 40px 20px;
@@ -1219,6 +1084,7 @@ header button:hover {
     padding: 15px 30px;
     font-size: 18px;
   }
+
   /* Почему выбирают меня */
   .why_i h2 {
     font-size: 28px;
@@ -1234,6 +1100,7 @@ header button:hover {
     flex: 1 1 100%;
     max-width: 100%;
   }
+
   /* Миссия */
   .my_mission {
     border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
@@ -1248,7 +1115,8 @@ header button:hover {
   .my_mission p:nth-child(3) {
     font-size: 20px;
   }
-  /* Результаты - ИСПРАВЛЕНО */
+
+  /* Результаты */
   .results {
     padding: 0 20px;
   }
@@ -1258,7 +1126,6 @@ header button:hover {
   .results_under_name {
     font-size: 24px;
   }
-  /* Специфичный селектор для контейнера "до/после" */
   .results > div:first-of-type {
     flex-direction: column;
   }
@@ -1274,18 +1141,22 @@ header button:hover {
   .text_results ol {
     font-size: 18px;
   }
+
+  /* === ИСПРАВЛЕНИЕ: фото в колонку === */
   .results_img {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* По макету 4 в ряду */
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    margin-left: 0;
+    margin-left: 0 !important;
     margin-top: 20px;
   }
   .results_img img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
     object-fit: cover;
   }
+
   /* Форма консультации */
   .consultation {
     border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
@@ -1313,6 +1184,7 @@ header button:hover {
   .submit-btn {
     font-size: 18px;
   }
+
   /* Подвал */
   .footer {
     margin-top: 50px;
@@ -1328,8 +1200,7 @@ header button:hover {
     margin-bottom: 20px;
   }
   .footer-left img {
-    /* width: 120px; УДАЛЕНО */
-    height: 150px; /* Увеличено для лучшего заполнения */
+    height: 150px;
     width: auto;
     transform: none;
   }
@@ -1357,11 +1228,11 @@ header button:hover {
     text-align: center;
   }
 }
-
 /* Адаптация для очень маленьких экранов */
 @media (max-width: 480px) {
+  /* Убедимся, что фото остаются в колонку */
   .results_img {
-    grid-template-columns: repeat(3, 1fr); /* 3 фото в ряд на маленьких экранах */
+    flex-direction: column;
   }
   .start-consultation-badge {
     left: 10px;
