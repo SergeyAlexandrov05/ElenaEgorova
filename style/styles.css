@@ -855,10 +855,16 @@ header button:hover {
   margin: 0;
   text-align: left;
 }
+.mobile-only {
+  display: none;
+}
 /* ========================================
    Мобильная адаптация
    ======================================== */
 @media (max-width: 768px) {
+  .mobile-only {
+  display: inline;
+}
   /* Вертикальный текст в Hero-секции */
   .start-consultation-badge {
     position: absolute;
@@ -923,6 +929,9 @@ header button:hover {
     padding: 80px 20px 20px;
     box-sizing: border-box;
     overflow-y: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding-right: 28px;
   }
   .mobile-menu.active {
     display: block;
@@ -931,21 +940,20 @@ header button:hover {
     display: block;
     color: var(--color-background);
     text-decoration: none;
-    padding: 12px 0;
-    font-size: 18px;
-    text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 0;
+    font-size: 12px;
+    text-align: left;
   }
   .mobile-menu button {
     display: block;
-    width: 100%;
-    margin: 20px auto 0;
+    width: 104px;
+    margin: 20px 0;
     padding: 12px;
-    background-color: var(--color-white);
-    color: var(--color-primary-green);
-    border: none;
-    border-radius: var(--border-radius-medium);
-    font-size: 18px;
+    background-color: var(--color-primary-green);
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    border-radius: 5px;
+    font-size: 12px;
     cursor: pointer;
     font-weight: bold;
   }
@@ -958,9 +966,14 @@ header button:hover {
     padding: 20px;
     position: relative;
   }
+  .start p{
+    font-size: 13px;
+    margin-top: 0;
+  }
   .start h1 {
-    font-size: 36px;
+    font-size: 32px;
     margin-top: 20px;
+    margin-bottom: 0px;
   }
   .start img {
     position: relative;
@@ -975,10 +988,17 @@ header button:hover {
     padding: 15px 20px;
     font-size: 18px;
   }
+  .start-motto-span {
+    margin: 0;
+  }
+  .start-consultation-badge {
+    margin-top: -50px;
+  }
 
   /* Блок "Ваш итог" */
   .what-you-get {
     border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+    margin-top: -40px;
   }
   .row {
     flex-direction: column;
@@ -988,7 +1008,11 @@ header button:hover {
   .item {
     flex-direction: column;
     text-align: center;
-    max-width: 100%;
+    max-width: 250px;
+    align-items: center;
+  }
+  .item p{
+    text-align: center;
   }
 
   /* Секция "Обо мне" */
@@ -1066,6 +1090,9 @@ header button:hover {
     text-align: center;
     padding: 20px;
     border-left: 3px dashed var(--color-pink-light);
+  }
+  .step-one {
+    margin-top: -70px;
   }
   .step-content .number {
     position: static;
@@ -1186,48 +1213,78 @@ header button:hover {
   }
 
   /* Подвал */
-  .footer {
-    margin-top: 50px;
-  }
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  .footer-left {
-    position: static;
-    margin: 0;
-    margin-bottom: 20px;
-  }
-  .footer-left img {
-    height: 150px;
-    width: auto;
-    transform: none;
-  }
-  .footer-right {
-    margin-left: 0;
-    padding-left: 0;
-    text-align: center;
-  }
-  .footer-right h2 {
-    font-size: 24px;
-  }
-  .footer-right h3 {
-    font-size: 18px;
-  }
-  .footer-links {
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-  .footer-links-left,
-  .footer-links-right {
-    gap: 10px;
-  }
-  .footer-copyright {
-    text-align: center;
-  }
+.footer {
+  margin-top: 50px;
+  max-height: 100%;
 }
+
+.footer-container {
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-left {
+  position: static;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.footer-left img {
+  height: 192px;
+  width: 196px;
+  transform: none;
+}
+
+.footer-right {
+  margin-left: 0;
+  padding-left: 0;
+  text-align: center;
+}
+
+.footer-right h2 {
+  font-size: 24px;
+}
+
+.footer-right h3 {
+  font-size: 18px;
+}
+
+.footer-links {
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-links-left,
+.footer-links-right {
+  gap: 10px;
+}
+
+/* Стиль кнопки "Записаться" для мобильной версии */
+.footer-btn {
+  background-color: transparent; /* Прозрачный фон */
+  color: var(--color-background); /* Белый текст */
+  border: 2px solid var(--color-background); /* Белая рамка */
+  padding: 12px 25px;
+  font-size: var(--font-size-small);
+  cursor: pointer;
+  transition: all var(--transition-normal) ease;
+}
+
+.footer-btn:hover {
+  background-color: var(--color-background); /* Белый фон при наведении */
+  color: var(--color-primary-green); /* Зеленый текст при наведении */
+}
+
+.footer-btn:active {
+  transform: translateY(0);
+}
+
+.footer-copyright {
+  text-align: center;
+}
+}
+
 /* Адаптация для очень маленьких экранов */
 @media (max-width: 480px) {
   /* Убедимся, что фото остаются в колонку */
