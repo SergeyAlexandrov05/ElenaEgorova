@@ -1214,76 +1214,88 @@ header button:hover {
 
   /* Подвал */
 .footer {
-  margin-top: 50px;
-  max-height: 100%;
+    margin-top: 50px;
+    padding: 35px 20px 40px; /* Убраны лишние отступы сверху/снизу */
+  }
+
+  .footer-container {
+    display: flex;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    gap: 20px; /* Отступ между фото и текстом */
+    max-width: 100%;
+    padding: 0;
+    flex-wrap: wrap; /* Разрешаем перенос на новую строку при необходимости */
+  }
+
+  .footer-left {
+    position: static;
+    margin: 0;
+    flex: 0 0 auto; /* Не растягиваем */
+    order: 1; /* Фото будет первым элементом */
+  }
+
+  .footer-left img {
+    width: 120px; /* Фиксированная ширина для маленьких экранов */
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px; /* Опционально: скругление углов */
+  }
+
+  .footer-right {
+    flex: 1 1 auto; /* Занимает оставшееся пространство */
+    order: 2; /* Текст будет вторым элементом */
+    padding-left: 0;
+    text-align: left; /* Выравнивание текста по левому краю */
+  }
+
+  .footer-right h2 {
+    font-size: 24px;
+    margin: 0 0 5px 0;
+  }
+
+  .footer-right h3 {
+    font-size: 16px;
+    margin: 0 0 20px 0;
+    opacity: 0.9;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start; /* Ссылки выравниваются по левому краю */
+  }
+
+  .footer-links a {
+    font-size: 16px;
+  }
+
+  .footer-btn {
+    background-color: transparent;
+    color: var(--color-background);
+    border: 2px solid var(--color-background);
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all var(--transition-normal) ease;
+    align-self: flex-start; /* Кнопка прижата к левому краю */
+  }
+
+  .footer-btn:hover {
+    background-color: var(--color-background);
+    color: var(--color-primary-green);
+  }
+
+  .footer-copyright {
+    text-align: left;
+    font-size: 12px;
+    opacity: 0.7;
+    margin: 0;
+    width: 100%; /* Занимает всю ширину */
+  }
 }
 
-.footer-container {
-  align-items: center;
-  padding: 20px;
-}
-
-.footer-left {
-  position: static;
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-.footer-left img {
-  height: 192px;
-  width: 196px;
-  transform: none;
-}
-
-.footer-right {
-  margin-left: 0;
-  padding-left: 0;
-  text-align: center;
-}
-
-.footer-right h2 {
-  font-size: 24px;
-}
-
-.footer-right h3 {
-  font-size: 18px;
-}
-
-.footer-links {
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.footer-links-left,
-.footer-links-right {
-  gap: 10px;
-}
-
-/* Стиль кнопки "Записаться" для мобильной версии */
-.footer-btn {
-  background-color: transparent; /* Прозрачный фон */
-  color: var(--color-background); /* Белый текст */
-  border: 2px solid var(--color-background); /* Белая рамка */
-  padding: 12px 25px;
-  font-size: var(--font-size-small);
-  cursor: pointer;
-  transition: all var(--transition-normal) ease;
-}
-
-.footer-btn:hover {
-  background-color: var(--color-background); /* Белый фон при наведении */
-  color: var(--color-primary-green); /* Зеленый текст при наведении */
-}
-
-.footer-btn:active {
-  transform: translateY(0);
-}
-
-.footer-copyright {
-  text-align: center;
-}
-}
 
 /* Адаптация для очень маленьких экранов */
 @media (max-width: 480px) {
