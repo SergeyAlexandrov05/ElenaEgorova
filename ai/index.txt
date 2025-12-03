@@ -1,0 +1,309 @@
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Елена Егорова | Нутрициолог</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#programs">Программы питания</a>
+            <a href="#why">Почему я?</a>
+            <a href="#results">Результаты</a>
+            <button>Записаться</button>
+        </nav>
+        <!-- Мобильное меню -->
+        <button class="mobile-menu-toggle" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="mobile-menu">
+            <a href="#about">Обо мне</a>
+            <a href="#programs">Программы питания</a>
+            <a href="#why">Почему я?</a>
+            <a href="#results">Результаты</a>
+            <button>Записаться</button>
+        </div>
+    </header>
+
+    <section class="start">
+        <div>
+            <h1>Елена Егорова</h1>
+            <p>Нутрициолог, консультант по питанию</p>
+            <p class="start-motto"><span class="start-motto-span">Изменив свой рацион - ты</span><br> изменишь свою <span class="shrift">РЕАЛЬНОСТЬ!</span></p>
+            <button>Оставить заявку</button>
+            <!-- Вертикальный текст на мобильных -->
+            <div class="start-consultation-badge">
+                <p>Первая консультация <span class="pink">бесплатно</span></p>
+            </div>
+        </div>
+        <img src="img/Airbrush-Image-Enhancer-1757521508544 1.png" alt="Елена Егорова"> 
+    </section>
+
+    <section class="what-you-get">
+        <h1>Ваш <span class="shrift schrift-result">итог</span> нашей работы:</h1>
+        <div class="row">
+          <div class="item">
+            <img src="img/icon/Vector (2).png" alt="Иконка энергии">
+            <p>Стабильная энергия<br>на весь день</p>
+          </div>
+          <div class="item">
+            <img src="img/icon/Vector (3).png" alt="Иконка веса">
+            <p>Комфортный вес без<br>борьбы с собой и едой</p>
+          </div>
+          <div class="item">
+            <img src="img/icon/Group 2.png" alt="Иконка свободы">
+            <p>Свобода от пищевого<br>стресса и тревог</p>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="item">
+            <img src="img/icon/Vector (4).png" alt="Иконка легкости">
+            <p>Легкость в теле,<br>здоровое пищеварение<br>и плоский живот</p>
+          </div>
+          <div class="item">
+            <img src="img/icon/Vector (5).png" alt="Иконка беременности">
+            <p>Подготовить организм к<br>беременности и мягко<br>восстановиться после родов</p>
+          </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-top">
+            <img src="img/Rectangle 12.png" alt="Елена Егорова">
+            <div class="about-text">
+              <p class="about-label">(обо мне)</p>
+              <h2>Елена Егорова | Консультант по питанию</h2>
+              <p>
+                Личный опыт похудения на -22 кг, который я сохраняю
+                4 года. На своем примере знаю, как сложно идти к 
+                цели одной, и теперь я — ваш проводник в мире 
+                сбалансированного питания.
+              </p>
+              <p class="about-highlight">
+                <span class="shrift schrift-highlight">
+                  Я НЕ ДАЮ ВРЕМЕННЫХ ДИЕТ. Я УЧУ ВАС И ВАШУ СЕМЬЮ ПИТАТЬСЯ ПРАВИЛЬНО — НА ВСЮ ЖИЗНЬ.
+                </span>
+              </p>
+              <div class="help-section">
+                    <p>Моя помощь — это:</p>
+                    <ol>
+                      <li>Персональное сопровождение «за руку»</li>
+                      <li>Сбалансированный рацион без ограничений</li>
+                      <li>Умение поддерживать вес и иммунитет</li>
+                      <li>Подбор программы под ваши задачи</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-cta">
+            <h3>
+              Готовы изменить привычки и <span class="shrift">обрести лёгкость?</span><br>
+              Подберём программу вместе!
+            </h3>
+        </div>
+    </section>
+
+    <section class="programs" id="programs">
+        <h2 class="programs-title">Программы питания:</h2>
+        <div class="programs-row">
+            <div class="block_programs block_programs-first">
+                <h4>Марафон</h4>
+                <p>Продолжительность: 21 день</p>
+                <p>Стоимость: 9 199</p>
+                <p>Что входит: 40 приемов пищи + детокс</p>
+                <button>Узнать подробнее</button>
+            </div>
+            <div class="block_programs block_programs-second"> 
+                <h4>Базовая</h4>
+                <p>Продолжительность: 30 дней</p>
+                <p>Стоимость: 14 199</p>
+                <p>Что входит: 60 приемов пищи + детокс, <br>  детокс 2.</p>
+                <button>Узнать подробнее</button>
+            </div>
+        </div>
+        <div class="block_programs">
+            <h4>Расширенная</h4>
+            <p>Продолжительность: 30 дней</p>
+            <p>Стоимость: 21 299</p>
+            <p>Что входит: 60 приемов пищи + детокс,  детокс 2. <br> Естественное очищение клеток, скульптор тела</p>
+            <button>Узнать подробнее</button>
+        </div>
+        <div class="block_programs">
+            <h4>Премиум</h4>
+            <p>Продолжительность: 30 дней</p>
+            <p>Стоимость: 25 399</p>
+            <p>Что входит: 60 приемов пищи + детокс,  детокс 2. Естественное очищение <br> клеток, скульптор тела. Запуск и активация работы клеток в организме</p>
+            <button>Узнать подробнее</button>
+        </div>
+    </section>
+
+    <section class="three_steps">
+      <div class="three_steps-header">
+        <h2>Ваш старт к результату - <br>БЕСПЛАТНО</h2>
+        <p>Первая консультация</p>
+      </div>
+      <div class="three_steps-container">
+        <div class="three_steps-line">
+          <img src="img/line.png" alt="Декоративная линия" class="line-image">
+        </div>
+        <div class="step step-one">
+          <div class="step-content">
+            <p class="number">01</p>
+            <h4>Глубинный анализ</h4>
+            <p>Разбираем ваш рацион и режим. Я изучаю ваши привычки, чтобы найти точки роста и слабые места.</p>
+          </div>
+        </div>
+        <div class="step step-two">
+          <div class="step-content">
+            <p class="number">02</p>
+            <h4>Персональная стратегия</h4>
+            <p>Создаем план под ваш график. Программа, которая работает даже при самом загруженном дне, с учетом ваших перерывов и возможностей.</p>
+          </div>
+        </div>
+        <div class="step step-three">
+          <div class="step-content">
+            <p class="number">03</p>
+            <h4>Диагностика</h4>
+            <p>Сканируем состав тела. Получаем и расшифровываем данные по 9 ключевым параметрам вашего организма: от жира и мышц до метаболизма и воды.</p>
+          </div>
+        </div>
+      </div>
+      <button class="three_steps-cta">Записаться на консультацию</button>
+    </section>
+
+    <section class="why_i" id="why">
+      <h2>Почему выбирают меня?</h2>
+      <p style="margin-top: -20px;">Я предлагаю не просто диету, а систему на всю жизнь</p>
+      <div class="why_i-grid">
+        <div class="why_i-item">
+          <img src="img/icon/Vector (6).png" alt="Весы">
+          <p>Похудела на 22 кг сама и удерживаю результат 4 года</p>
+        </div>
+        <div class="why_i-item">
+          <img src="img/icon/Vector (7).png" alt="Руки">
+          <p>Веду «за руку» от начала и до устойчивого результата</p>
+        </div>
+        <div class="why_i-item">
+          <img src="img/icon/Group 4.png" alt="ПП">
+          <p>Учу осознанному питанию всю семью, а не сажаю на диету</p>
+        </div>
+        <div class="why_i-item">
+          <img src="img/icon/Group 3.png" alt="Календарь">
+          <p>Создаю программы под ваш график, а не под шаблон</p>
+        </div>
+        <div class="why_i-item">
+          <img src="img/icon/Vector (8).png" alt="Лупа">
+          <p>Использую точную диагностику (анализ состава тела) для ясной картины</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="my_mission">
+      <p>(моя миссия)</p>
+      <p>Моя <span class="shrift schrift-result">основная</span> задача — превратить ваше питание из источника стресса в источник сил и здоровья — на всю жизнь.</p>
+      <p>Я научу вас дружить с едой, чтобы вы могли поддерживать свой идеальный вес самостоятельно, без диет и мучений.</p>
+    </section>
+
+    <section class="results" id="results">
+      <h2>Наши результаты</h2>
+      <p class="results_under_name">Преображение в декрете: -22 кг и возвращение к жизни</p>
+      <div>
+        <img src="img/resulat/Rectangle 20.png">
+        <img src="img/resulat/Rectangle 28.png">
+        <div class="text_results">
+          <p>
+            Всего за 4,5 месяца я похудела на 22 кг,
+            находясь в декрете с малышом. Не было ни
+            времени на спорт, ни сил на себя, а питание
+            должно было быть безопасным при
+            грудном вскармливании.
+          </p>
+          <p>
+            Главное — я не отказывалась от любимых
+            продуктов! Я ела вкусно и разнообразно.
+          </p>
+          <p>
+            Уже на <span class="pink_results">3-й</span> день программы я ощутила
+            первые изменения:
+          </p>  
+            <ol>
+              <li>
+                Появилась энергия — я перестала
+                чувствовать усталость и спать днём.
+              </li>
+              <li>
+                Ушла боль — перестали болеть спина и
+                колени, что было настоящим спасением.
+              </li>
+              <li>
+                Восстановилось тело — заметно
+                укрепились волосы и подтянулась кожа.
+              </li>
+            </ol>
+        </div>
+      </div>
+      <div class="results_img">
+        <img src="img/resulat/Rectangle 35.png">
+        <img src="img/resulat/Rectangle 34.png">
+        <img src="img/resulat/Rectangle 36.png">
+      </div>
+    </section>
+
+    <section class="consultation">
+      <p class="name_consultation">Запишитесь на <span class="pink_consultation">бесплатную</span> консультацию</p>
+      <p class="consultation-description">
+        Эта встреча позволит нам познакомиться и <br>
+        наметить цели нашей работы.
+      </p>
+    
+      <!-- Форма с FormSubmit -->
+      <form action="https://formsubmit.co/sergobossboss@yandex.ru" method="POST" class="form-container">
+        <div class="form-top">
+          <div class="inputs">
+            <input type="text" name="Имя" placeholder="Ваше Имя" required class="name_input" aria-label="Ваше Имя" pattern="[а-яА-ЯёЁa-zA-Z\s]+" minlength="2" maxlength="50" title="Имя должно содержать только буквы">
+            <!-- Добавь валидацию номера телефона: только цифры, начинается с +7, минимум 11 символов -->
+            <input type="tel" name="Телефон" placeholder="Номер телефона" required class="phone_input" aria-label="Номер телефона" pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" title="Введите номер телефона в формате +7 (XXX) XXX-XX-XX">
+          </div>
+      
+          <div class="survey">
+            <p>Пройди опрос, чтобы я лучше смогла понять тебя</p>
+            <button type="button" class="survey-btn">Пройти опрос</button>
+          </div>
+        </div>       
+        <button type="submit" class="submit-btn">ОТПРАВИТЬ ЗАЯВКУ</button>
+      </form>
+    </section>
+  <script src="js/validation.js"></script>
+
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="img/Airbrush-Image-Enhancer-1757521508544 1.png" alt="Елена Егорова">
+        </div>
+        <div class="footer-right">
+            <h2>Елена Егорова</h2>
+            <h3>Нутрициолог, консультант по питанию</h3>
+            <div class="footer-links">
+                <div class="footer-links-left">
+                    <a href="#about">Обо мне</a>
+                    <a href="#programs">Программы питания</a>
+                </div>
+                <div class="footer-links-right">
+                    <a href="#why">Почему я?</a>
+                    <a href="#results">Результаты</a>
+                </div>
+                <button class="footer-btn">Записаться</button>
+            </div>
+            <p class="footer-copyright">© 2025 КодРоста — продвижение бизнеса в России. Все права защищены</p>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>
