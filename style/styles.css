@@ -1212,77 +1212,199 @@ header button:hover {
     font-size: 18px;
   }
 
-  /* Подвал */
-.footer {
-  margin-top: 50px;
-  max-height: 100%;
-}
-
-.footer-container {
-  align-items: center;
-  padding: 20px;
-}
-
-.footer-left {
-  position: static;
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-.footer-left img {
-  height: 192px;
-  width: 196px;
-  transform: none;
-}
-
-.footer-right {
-  margin-left: 0;
-  padding-left: 0;
-  text-align: center;
-}
-
-.footer-right h2 {
-  font-size: 24px;
-}
-
-.footer-right h3 {
-  font-size: 18px;
-}
-
-.footer-links {
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
 .footer-links-left,
 .footer-links-right {
   gap: 10px;
 }
 
-/* Стиль кнопки "Записаться" для мобильной версии */
-.footer-btn {
-  background-color: transparent; /* Прозрачный фон */
-  color: var(--color-background); /* Белый текст */
-  border: 2px solid var(--color-background); /* Белая рамка */
-  padding: 12px 25px;
-  font-size: var(--font-size-small);
-  cursor: pointer;
-  transition: all var(--transition-normal) ease;
+/* Для мобильной версии */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .footer-left {
+    position: static;
+    margin: 0;
+    order: 1; /* Помещаем изображение первым на мобильных */
+  }
+
+  .footer-left img {
+    height: 192px;
+    width: 196px;
+    transform: none;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .footer-right {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+    order: 2; /* Заголовки и ссылки идут после изображения */
+  }
+
+  .footer-right h2 {
+    font-size: 24px;
+  }
+
+  .footer-right h3 {
+    font-size: 18px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .footer-links-left,
+  .footer-links-right {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer-links a {
+    text-align: center;
+  }
+
+  /* Стиль кнопки "Записаться" для мобильной версии */
+  .footer-btn {
+    background-color: transparent; /* Прозрачный фон */
+    color: var(--color-background); /* Белый текст */
+    border: 2px solid var(--color-background); /* Белая рамка */
+    padding: 12px 25px;
+    font-size: var(--font-size-small);
+    cursor: pointer;
+    transition: all var(--transition-normal) ease;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .footer-btn:hover {
+    background-color: var(--color-background); /* Белый фон при наведении */
+    color: var(--color-primary-green); /* Зеленый текст при наведении */
+  }
+
+  .footer-btn:active {
+    transform: translateY(0);
+  }
+
+  .footer-copyright {
+    text-align: center;
+    order: 3; /* Копирайт идет последним */
+  }
 }
 
-.footer-btn:hover {
-  background-color: var(--color-background); /* Белый фон при наведении */
-  color: var(--color-primary-green); /* Зеленый текст при наведении */
-}
+/* Для десктопной версии */
+@media (min-width: 769px) {
+  .footer-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
 
-.footer-btn:active {
-  transform: translateY(0);
-}
+  .footer-left {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    z-index: 2;
+    margin-left: -150px;
+  }
 
-.footer-copyright {
-  text-align: center;
-}
+  .footer-left img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transform: translateY(7.2%);
+    max-height: 150%;
+  }
+
+  .footer-right {
+    flex: 0 0 75%;
+    padding-left: 40px;
+    margin-left: 550px;
+  }
+
+  .footer-right h2 {
+    color: var(--color-background);
+    font-size: 32px;
+    margin: 0 0 10px 0;
+  }
+
+  .footer-right h3 {
+    color: var(--color-background);
+    font-size: 22px;
+    margin: 0 0 30px 0;
+    opacity: 0.9;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 50px;
+  }
+
+  .footer-links-left, .footer-links-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-links a {
+    color: var(--color-background);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    text-align: left;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-pink-light);
+  }
+
+  .footer-btn {
+    background-color: var(--color-pink-light);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius-small);
+    padding: 12px 25px;
+    font-size: var(--font-size-small);
+    cursor: pointer;
+    transition: background-color var(--transition-normal) ease, transform var(--transition-fast) ease;
+    width: auto;
+    margin: 0;
+  }
+
+  .footer-btn:hover {
+    background-color: var(--color-pink);
+    transform: translateY(-2px);
+  }
+
+  .footer-btn:active {
+    transform: translateY(0);
+  }
+
+  .footer-copyright {
+    color: var(--color-background);
+    font-size: 14px;
+    opacity: 0.7;
+    margin: 0;
+    text-align: left;
+  }
 }
 
 /* Адаптация для очень маленьких экранов */
